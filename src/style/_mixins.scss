@@ -1,0 +1,16 @@
+/* ==========================
+    SASS MIXINS  
+========================== */
+@mixin common(){
+    background: $background;
+    box-shadow: $box-shadow;
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 1rem;
+}
+
+@mixin common2(){
+    background:$background-light;
+    box-shadow: $box-shadow;
+    border-radius: 1rem;
+}

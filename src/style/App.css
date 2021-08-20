@@ -1,0 +1,584 @@
+/* Web Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Ubuntu:wght@300;400;500;700&display=swap");
+/* variables start*/
+/* variables end here*/
+/*Mixins and Include start here*/
+/* Reset Css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  text-transform: capitalize;
+  outline: none;
+  border: none;
+  font-weight: normal;
+  transition: 0.3s linear;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* Body Styling */
+body {
+  background: #020024;
+  color: #fff;
+  overflow-x: hidden;
+  padding: 1.5rem;
+}
+
+body::-webkit-scrollbar {
+  background: rgba(255, 255, 255, 0.2);
+  width: 9px;
+}
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #555;
+}
+
+body::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Color Switcher start*/
+.color-switcher {
+  position: fixed;
+  top: 1.563rem;
+  right: -12.5rem;
+  width: 12.5rem;
+  padding: 0.625rem;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 1rem;
+  z-index: 1000;
+}
+.color-switcher h3 {
+  font-size: 1.1rem;
+  margin-bottom: 1.2rem;
+  padding: 0.5rem 0;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 1rem;
+  font-weight: bold;
+}
+.color-switcher .switcher-btn {
+  position: absolute;
+  top: 0;
+  left: -3.75rem;
+  padding: 0.625rem 1.25rem;
+  cursor: pointer;
+  font-size: 2.188rem;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 1rem;
+  transition: all 0.4s ease-in-out;
+}
+.color-switcher .switcher-btn svg {
+  -webkit-animation: rotate 2s linear infinite;
+          animation: rotate 2s linear infinite;
+}
+@-webkit-keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.color-switcher .theme-buttons-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.color-switcher .theme-buttons-container .theme-buttons {
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 0 0.3rem rgba(255, 255, 255, 0.2), 0 1rem 2rem rgba(255, 255, 255, 0.2);
+  display: block;
+  height: 3rem;
+  width: 3rem;
+  margin: 0.313rem;
+}
+
+.color-switcher.active {
+  right: 0px;
+}
+
+/* Color Switcher End*/
+/* hamburger icon start */
+.hamburger-bar {
+  position: absolute;
+  top: 7%;
+  display: none;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.2);
+  text-align: center;
+}
+.hamburger-bar:hover {
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 0 1rem rgba(255, 255, 255, 0.2);
+}
+.hamburger-bar svg {
+  font-size: 1.5rem;
+  color: #fff;
+  margin-top: 0.2rem;
+}
+
+#click {
+  display: none;
+}
+
+/* hamburger menu end */
+/* Common Css */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 3.5rem;
+  font-weight: 500;
+}
+
+h4 {
+  font-size: 1.4rem;
+}
+
+a {
+  color: inherit;
+}
+
+button,
+.btn {
+  font-size: 1rem;
+  padding: 0.7rem 3rem;
+  color: #fff;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: all 0.2s linear;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 1rem;
+}
+
+button:hover,
+.btn:hover {
+  background: rgba(255, 255, 255, 0.5);
+  color: #555;
+}
+
+main {
+  margin-left: 17rem;
+  min-height: 94vh;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 1rem;
+  padding: 3rem;
+}
+
+.heading {
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  display: inline-block;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  letter-spacing: 0.1rem;
+  word-spacing: 0.1rem;
+  color: #eee;
+  font-size: 1rem;
+}
+
+/* Common Css End*/
+/* Navigation Start */
+header {
+  overflow: hidden;
+  position: fixed;
+  width: 16.3rem;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 1rem;
+  text-align: center;
+  padding: 1rem 0;
+  height: 94vh;
+  transition: all 0.4s ease-in-out;
+}
+header .user {
+  padding: 0.5rem 0;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+header .user img {
+  margin: 0.5rem 0;
+  height: 7rem;
+  width: 7rem;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  box-shadow: 0 0 0 1rem rgba(255, 255, 255, 0.2);
+}
+header .user .name {
+  font-size: 1.5rem;
+  padding: 0.5rem 0;
+}
+header .user .post {
+  color: #eee;
+  letter-spacing: 0;
+  word-spacing: 0;
+  font-size: 0.8rem;
+}
+header .navbar {
+  padding: 1rem 2rem;
+}
+header .navbar ul .active-menu {
+  background: rgba(255, 255, 255, 0.5);
+  color: #555;
+}
+header .navbar ul li {
+  margin: 0.7rem 0;
+}
+header .navbar ul li a {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 1rem;
+  display: block;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 1rem;
+  transition: all 0.4s ease-in-out;
+}
+header .navbar ul li a:hover {
+  background: rgba(255, 255, 255, 0.5);
+  color: #555;
+}
+
+/* Home Section Start */
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  height: 70vh;
+  position: relative;
+  width: 100%;
+}
+.home .typography {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+.home .typography h1 span {
+  font-size: 3.5rem;
+  font-weight: 500;
+}
+.home .typography h2 {
+  color: #eee;
+  font-size: 1.7rem;
+}
+.home .typography p {
+  width: 70%;
+  margin-top: 0.5rem;
+}
+.home .typography .share {
+  position: absolute;
+  bottom: -100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease-in-out;
+}
+.home .typography .share a {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  padding: 0.5rem;
+  margin: 0.5rem;
+  color: #fff;
+  font-size: 1rem;
+}
+.home .typography .share a:hover {
+  background: rgba(255, 255, 255, 0.5);
+  color: #555;
+}
+
+/* Home Section End */
+/* About Section Start */
+.about {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  margin: 1rem 0;
+}
+.about .info-part {
+  margin-top: 1rem;
+}
+.about .info-part h3 {
+  margin: 0.5rem 0;
+  font-size: 1.7rem;
+}
+.about .info-part h3 span {
+  color: #eee;
+}
+.about .info-part p {
+  font-size: 0.9rem;
+}
+.about .info-part button:nth-child(2) {
+  margin-left: 0.5rem;
+}
+
+/* About Section End */
+/* Skills part start */
+.my-skills {
+  padding: 1.5rem 0;
+}
+.my-skills .skills {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1.5rem;
+  padding: 1.5rem 0;
+}
+.my-skills .skills .skill-box {
+  padding: 1rem;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 1rem;
+}
+.my-skills .skills .skill-box h3 {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.3rem;
+}
+.my-skills .skills .skill-box .progress {
+  position: relative;
+  width: 100%;
+  height: 0.4rem;
+  background: #555;
+}
+.my-skills .skills .skill-box .progress span {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  background: #fff;
+}
+
+/* skills part end */
+/* Testimonials part start */
+.testimonials {
+  margin: 1rem 0;
+}
+.testimonials .clients-say {
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+.testimonials .clients-say .slide {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+.testimonials .clients-say .slide .testimonial-item {
+  width: 80%;
+}
+
+/* Testimonial part end */
+/* Services Section Start Here */
+.services {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+  margin: 1rem 0;
+}
+.services .box {
+  border-radius: 1rem;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.2);
+  text-align: center;
+  padding: 1rem;
+  transition: all 0.4s ease-in-out;
+}
+.services .box h2 {
+  margin: 0.5rem 0;
+}
+.services .box h2 svg {
+  height: 3rem;
+  width: 3rem;
+}
+.services .box h4 {
+  margin: 0.5rem 0;
+  font-size: 1.4rem;
+}
+.services .box p {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+}
+.services .box:hover {
+  background: rgba(255, 255, 255, 0.5);
+  transform: translateY(-3%);
+}
+
+/* Services Section End */
+/* REsume Section Start */
+.resume {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 3rem;
+}
+.resume .education h4, .resume .experience h4 {
+  padding: 1rem 0;
+  font-size: 1.5rem;
+}
+.resume .education h4 span, .resume .experience h4 span {
+  margin-left: 0.5rem;
+}
+.resume .education svg, .resume .experience svg {
+  font-size: 1.5rem;
+}
+.resume .resumeItem {
+  width: 100%;
+  position: relative;
+  padding-left: 20px;
+  border-left: 3px solid rgba(255, 255, 255, 0.2);
+  padding: 1.5rem;
+}
+.resume .resumeItem::before {
+  content: "";
+  position: absolute;
+  left: -11px;
+  top: 1.9rem;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.5);
+}
+.resume .resumeItem h5 {
+  font-size: 1.2rem;
+}
+.resume .resumeItem h6 {
+  font-size: 1rem;
+  font-weight: normal;
+  margin: 0.5rem 0;
+}
+.resume .resumeItem p {
+  font-size: 0.8rem;
+}
+
+/* Resume Section nd */
+/* Portfolio Section start */
+/* .portfolio{
+
+} */
+/* portfolio section end */
+/* Contact section start */
+.contact {
+  margin: 2rem 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.contact form {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  border-radius: 1rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  flex-wrap: wrap;
+}
+.contact form .box {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  border-radius: 1rem;
+  width: 49%;
+  height: 3rem;
+  padding: 1.4rem 1rem;
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  text-transform: none;
+  color: #fff;
+}
+.contact form .box::-moz-placeholder {
+  text-transform: capitalize;
+  color: #eee;
+}
+.contact form .box:-ms-input-placeholder {
+  text-transform: capitalize;
+  color: #eee;
+}
+.contact form .box::placeholder {
+  text-transform: capitalize;
+  color: #eee;
+}
+.contact form .message {
+  padding: 1.4rem 1rem;
+  height: 9rem;
+  resize: none;
+  width: 100%;
+}
+.contact form .btn {
+  padding: 0.4rem 1rem;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+.contact .content {
+  padding: 0 4rem;
+}
+.contact .content .icons {
+  padding: 1rem 0;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 1rem 0;
+}
+.contact .content .icons h3 {
+  padding: 0.7rem 0;
+  font-size: 1.5rem;
+  color: #fff;
+  display: flex;
+}
+.contact .content .icons h3 svg {
+  margin-right: 1rem;
+  font-size: 2rem;
+}
+.contact .content .icons p {
+  font-size: 1rem;
+  text-align: center;
+}
+
+/* contact section end *//*# sourceMappingURL=App.css.map */
