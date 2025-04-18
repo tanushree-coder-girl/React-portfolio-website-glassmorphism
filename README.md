@@ -40,8 +40,6 @@ This is a **multi-page React-based portfolio website** built with a **Glassmorph
 
 ## 📷 Screenshot
 
-> (Add your screenshot image here, name it `screenshot.png` and place it in the root folder)
-
 ![App Screenshot](./ss.png)
 
 ## 🛠️ How to Run
